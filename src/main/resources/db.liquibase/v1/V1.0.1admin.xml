@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+    <changeSet id="1" author="Bahodir">
+
+        <insert tableName="users">
+            <column name="id">1</column>
+            <column name="username">bahodir</column>
+            <column name="email">turayev.bahodir95@gmail.com</column>
+            <column name="lastname">Turayev</column>
+            <column name="firstname">Bahodir</column>
+            <column name="password">$2a$10$u2y6R071Mv0XPWP.qSsuOOTGD2GYaPLiycmLsbvtHAM0jJ3Z4Mqsa</column>
+            <column name="status">ACTIVE</column>
+            <column name="role">ADMIN</column>
+        </insert>
+        <insert tableName="cities">
+            <column name="id">1</column>
+            <column name="parentId">1703</column>
+            <column name="name">Andijon</column>
+        </insert>
+        <insert tableName="user_cities">
+            <column name="city_id">1</column>
+            <column name="user_id">1</column>
+        </insert>
+        <insert tableName="weather">
+            <column name="id">1</column>
+            <column name="wind_speed">12.0</column>
+            <column name="temperature">25.0</column>
+            <column name="cityId">1</column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
